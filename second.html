@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION2</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(168, 106, 106);
+            font-family:monospace;
+        }
+        .nav{
+            background-color: rgb(160, 14, 21);
+            display: block;
+            overflow: hidden;
+        }
+        .nav > h1{
+            margin: 1rem;
+        }
+        main{
+            margin: 1rem;
+            margin-bottom: 50px;
+        }
+        .content {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: larger;
+        }
+        input {
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+        }
+        button{
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            border-radius: 10px;
+            background-color: rgb(126, 168, 230);
+            margin: 1rem;
+        }
+        .code{
+            background-color: black;
+            color: white;
+            white-space: pre;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function sayHelloHead() {
+            alert("Hello! Here we are using script tag in the head")
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <h1>Name - Sandhya Kumari</h1>
+        <h1>Roll no. - 2006126</h1>
+    </div>
+    <main>
+        <div> 
+            <h1>QUESTION 2</h1>
+            <h1>Show the Scope of variables in JS using HTML page.</h1>
+        </div>
+        <hr>
+        <div class="content">
+            <p>
+            JavaScript has 3 types of scope:<br><br>
+            1. Block Scope <br>
+            2. Function Scope <br>
+            3. Global Scope <br>
+            </p>
+            <hr>
+            <p>We will use the same variable <strong>myVar</strong> to demonstrate the scope of variables in JS</p>
+            <h3>1. Block Scope</h3>
+            <p>
+                ES6 introduced two important new JavaScript keywords: let and const. <br><br>
+
+                These two keywords provide Block Scope in JavaScript. <br><br>
+                
+                Variables declared inside a { } block cannot be accessed from outside the block: <br>
+            </p>
+            <p>
+            Example: <br> 
+            Here we can use the varible myVar only in the {}
+            <div class="code">
+            {
+                let myVar = 5; 
+                function scope(){
+                    alert("Value of variable myVar in the block: " + myVar)
+                }
+            }
+            // myVar cannot be used here
+            </div>
+            Click on this button to call function scopeBlock <button onclick="scopeBlock()">Block Scope</button>
+            </p>
+            <h3>2. Function Scope</h3>
+            <p>
+                JavaScript has function scope: Each function creates a new scope. <br><br>
+
+                Variables defined inside a function are not accessible (visible) from outside the function. <br><br>
+                
+                Variables declared with var, let and const are quite similar when declared inside a function.
+            </p>
+            <h3>3. Global Scope</h3>
+            <p>
+                Variables declared Globally (outside any function) have Global Scope. <br><br>
+
+                Global variables can be accessed from anywhere in a JavaScript program. <br><br>
+
+                Variables declared with var, let and const are quite similar when declared outside a block.
+            </p>
+            <p>
+                Example: <br><br>
+                We will use the variable myVar to demonstrate global and function scope
+                <div class="code">
+                var myVar = 10; // myVar defined globally
+                
+                function scopeFunction(){
+                    var myVar = 20;
+                    alert("Value of variable myVar in the function: " + myVar)
+                }
+                
+                function scopeGlobal(){
+                    alert("Value of variable myVar globally: " + myVar)
+                }
+                </div>
+                Click on this button to call function scopeFunction <button onclick="scopeFunction()">Function Scope</button> <br>
+                Click on this button to call function scopeGlobal <button onclick="scopeGlobal()">Global Scope</button> <br>
+                </p>
+        </div>
+    </main>
+
+    <script src="./scope.js" type="text/javascript"></script>
+</body>
+
+</html>

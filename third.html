@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION3</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(168, 106, 106);
+            font-family:monospace;
+        }
+        .nav{
+            background-color: rgb(160, 14, 21);
+            display: block;
+            overflow: hidden;
+        }
+        .nav > h1{
+            margin: 1rem;
+        }
+        main{
+            margin: 1rem;
+            margin-bottom: 50px;
+        }
+        .content {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;            
+            font-size: larger;
+        }
+        input {
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+        }
+        button{
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            border-radius: 10px;
+            background-color: rgb(126, 168, 230);
+            margin: 1rem;
+        }
+        .code{
+            background-color: black;
+            color: white;
+            white-space: pre;
+            margin-block: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function sayHelloHead() {
+            alert("Hello! Here we are using script tag in the head")
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <h1>Name - Sandhya Kumari</h1>
+        <h1>Roll no. - 2006126</h1>
+    </div>
+    <main>
+        <div>
+            <h1>QUESTION 3</h1>
+            <h1>Explain three difference between Undefined and not defined variables in JS using HTML page.</h1>
+        </div>
+        <hr>
+        <div class="content">
+            <h3 style="color: rgb(36, 128, 17);">Please check the console output</h3>
+            <h2>Undefined possible cases:</h2>
+            <ul>
+                <li>Whenever we declare a variable without assigning any value to it, javascript implicitly assigns its value as undefined.</li>
+                <div class="code">
+                    let name;
+                    console.log("Undefined example 1:");
+                    console.log(name); //undefined
+                </div>
+                <li>When value is not assigned in array or object</li> 
+                <div class="code">
+                    let numArray = [5,6,,8];
+                    console.log(numArray);  
+                    //[5, 6, empty, 8]
+                    console.log("Undefined example 2:")
+                    console.log(typeof(numArray[2]));
+                    //"undefined"
+                </div>
+                <li> When functions don’t have a return statement but are called for assigning a value to a variable.</li>
+                <div class="code">
+                    let add = (a,b) => {
+                        let c = a+b;
+                        //return c;
+                    }
+                    let sum = add(2,3);
+                    console.log("Undefined example 3:")
+                    console.log(sum); 
+                </div>
+             </ul>
+             <h2>Not defined possible cases:</h2>
+             <ul>
+                 <li>A not defined is a variable which is not declared at a given point of time with declaration keyword like var, let or const.</li>
+                <div class="code">
+                    console.log(b);
+                    b = 5;
+                </div>
+             </ul>
+        </div>
+    </main>
+
+    <script src="./third.js" type="text/javascript"></script>
+</body>
+
+</html>
